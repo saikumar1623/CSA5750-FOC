@@ -1,0 +1,33 @@
+#include <stdio.h>
+
+
+int binAddition(int a, int b)
+{
+    int c; 
+    while (b != 0) {
+        
+        c = (a & b) << 1;
+       
+        a = a ^ b;
+        b = c;
+    }
+    return a;
+}
+
+int main()
+{
+    int number1, number2, binAdd;
+
+    printf("Input first integer value: ");
+    scanf("%d", &number1);
+
+    printf("Input second integer value: ");
+    scanf("%d", &number2);
+
+    binAdd = binAddition(number1, number2);
+
+
+    printf("Binary Addition: %d\n", binAdd);
+
+    return 0;
+}
