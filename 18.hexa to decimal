@@ -1,0 +1,9 @@
+#include<stdio.h>
+int main()
+{
+	int n;
+	printf("Enter the hexadecimal number=");
+	scanf("%x",&n);
+	printf("The decimal number:%d",n);
+	return 0;
+}
